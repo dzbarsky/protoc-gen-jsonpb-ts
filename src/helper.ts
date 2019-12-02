@@ -5,8 +5,8 @@ export abstract class Helper {
   isRepeated(field: FieldDescriptorProto.AsObject) {
     return FieldDescriptorProto.Label.LABEL_REPEATED === field.label;
   }
-  isRequired(field: FieldDescriptorProto.AsObject) {
-    return FieldDescriptorProto.Label.LABEL_REQUIRED === field.label;
+  isRequired(_field: FieldDescriptorProto.AsObject) {
+    return true;
   }
 
   abstract mapImports(dependencies: string[], filename: string): DependencySchema[];
